@@ -1,0 +1,49 @@
+.infield {
+  position: relative;
+  margin: 8px 0px;
+  width: 18rem;
+}
+
+.loginBtn {
+  width: 110%;
+  margin-top: 3rem;
+  padding: 10px 20px;
+  border: none;
+  background: #1a2a46;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 110%;
+}
+
+.loginBtn:hover {
+  background: #23395dde;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  border: none;
+  outline: none;
+}
+
+label {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-45%);
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(to right, #141e30, #243b55);
+  transition: 0.3s;
+}
+
+input:focus ~ label {
+  width: 110%;
+}
+
+.loginBtn {
+  margin-top: 1.5rem;
+}

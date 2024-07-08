@@ -1,0 +1,10 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --background-color: #ffffff;
+  --black-text: #151618;
+}
+
+.container {
+  background: var(--background-color);
+  color: var(--black-text);
+}
