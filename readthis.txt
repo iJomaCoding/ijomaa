@@ -1,0 +1,12 @@
+Create your react folder first in cmd, 
+  npm create vite@lates
+  folder name
+  choose React
+  choose javascript
+  cd foldername
+  npm install
+  npm run dev
+  then remove some files
+  and change with the file contents in here
+
+thats it.....
