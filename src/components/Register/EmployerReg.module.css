@@ -5,13 +5,13 @@
   align-items: center;
 }
 
-.container img {
-  width: 300px;
-  height: 70px;
+.container .logo {
+  width: 107px;
+  height: 55px;
   object-fit: cover;
   position: absolute;
-  left: -30px;
-  top: 1rem;
+  left: 100px;
+  top: 13px;
 }
 
 .container p {

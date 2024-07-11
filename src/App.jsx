@@ -1,18 +1,20 @@
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import SlideLogin from "./components/Login/Login";
 import JobseekerReg from "./components/Register/JobseekerReg";
 import EmployerReg from "./components/Register/EmployerReg";
 import AdminLogin from "./components/Admin/Login/AdminLogin";
-import { Route, Routes } from "react-router-dom";
 import JobseekerDashboard from "./components/JobseekerDisplay/Dashboard/JobseekerDashboard";
 import EmployerDashboard from "./components/EmployerDisplay/Dashboard/EmployerDashboard";
 import AdminDashboard from "./components/Admin/Dashboard/AdminDashboard";
+import LandingPage from "./components/Hero/LandingPage";
 
 function App() {
   return (
     <div className="container">
       <Routes>
-        <Route path="/" element={<SlideLogin />}></Route>
+        <Route path="/" element={<LandingPage />}></Route>
+        <Route path="/login" element={<SlideLogin />}></Route>
         <Route path="/jobseeker" element={<JobseekerReg />}></Route>
         <Route
           path="/jobseeker/dashboard"

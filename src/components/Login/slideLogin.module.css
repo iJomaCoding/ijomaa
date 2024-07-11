@@ -8,6 +8,15 @@
   background: #f7f7f7;
 }
 
+.loginContainer .logo {
+  width: 107px;
+  height: 55px;
+  object-fit: cover;
+  position: absolute;
+  left: 100px;
+  top: 13px;
+}
+
 .formContainer {
   position: relative;
   width: 700px;

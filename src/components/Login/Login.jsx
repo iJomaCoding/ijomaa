@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styles from "./slideLogin.module.css";
 import JobseekerLogin from "./JobseekerLogin";
 import EmployerLogin from "./EmployerLogin";
-import ijoma_white from "../../assets/logo/ijoma_white.png";
+import ijoma_white from "../../assets/logo/ijoma2_light.png";
+import ijomaLogo from "../../assets/logo/ijoma2_dark.png";
 
 import { Link } from "react-router-dom";
 
@@ -15,6 +16,10 @@ const Login = () => {
 
   return (
     <div className={styles.loginContainer}>
+      <Link to="/">
+        <img className={styles.logo} src={ijomaLogo} alt="iJoma" />
+      </Link>
+
       <div
         className={`${styles.formContainer} ${
           isJobseeker ? styles.slideJobseeker : styles.slideEmployer

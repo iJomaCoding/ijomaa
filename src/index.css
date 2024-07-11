@@ -4,6 +4,14 @@
   --black-text: #151618;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
 .container {
   background: var(--background-color);
   color: var(--black-text);

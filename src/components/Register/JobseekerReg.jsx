@@ -1,14 +1,13 @@
 import React from "react";
 import styles from "./JobseekerReg.module.css";
 import { Link } from "react-router-dom";
-import ijoma_dark from "../../assets/logo/ijoma_dark.png";
+import ijomaLogo from "../../assets/logo/ijoma2_dark.png";
 
 const JobseekerReg = () => {
   return (
     <div className={styles.container}>
       <Link to="/">
-        {" "}
-        <img src={ijoma_dark} alt="ijoma" />
+        <img className={styles.logo} src={ijomaLogo} alt="iJoma" />
       </Link>
 
       <div className={styles.registerCon}>
@@ -29,7 +28,7 @@ const JobseekerReg = () => {
             Hello! Welcome to <span>iJoma</span>
           </h3>
           <p>Already have an account?</p>
-          <Link to="/">
+          <Link to="/login">
             <button className={styles.button89} type="button">
               Log in
             </button>

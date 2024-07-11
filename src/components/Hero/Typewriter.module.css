@@ -1,0 +1,27 @@
+.typewriter {
+  display: inline;
+  position: relative;
+}
+
+.cursor {
+  display: inline-block;
+  width: 4px;
+  height: 1em; /* Adjust height as needed */
+  background-color: #1a2a46; /* Change to desired cursor color */
+  margin-left: 2px; /* Adjust spacing as needed */
+  animation: 1s step-end infinite blink;
+  position: absolute;
+  top: 7px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

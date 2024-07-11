@@ -1,14 +1,13 @@
 import React from "react";
 import styles from "./EmployerReg.module.css";
 import { Link } from "react-router-dom";
-import ijoma_dark from "../../assets/logo/ijoma_dark.png";
+import ijomaLogo from "../../assets/logo/ijoma2_dark.png";
 
 const EmployerReg = () => {
   return (
     <div className={styles.container}>
       <Link to="/">
-        {" "}
-        <img src={ijoma_dark} alt="ijoma" />
+        <img className={styles.logo} src={ijomaLogo} alt="iJoma" />
       </Link>
       <h2>Employer Registration</h2>
       <form>
@@ -24,7 +23,7 @@ const EmployerReg = () => {
       </form>
       <div className={styles.footer}>
         <p>
-          Already have an account? <Link to="/">Log in</Link>
+          Already have an account? <Link to="/login">Log in</Link>
         </p>
       </div>
     </div>
