@@ -1,5 +1,5 @@
 .mainContainer {
-  --dakrblue: #1a2a46;
+  --darkblue: #1a2a46;
 }
 
 .featuredName {
@@ -7,7 +7,17 @@
   justify-content: center;
   align-items: center;
   font-size: 2em;
-  color: var(--dakrblue); /* Example color */
+  color: var(--darkblue);
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: var(--darkblue);
+  margin-top: -30px;
+  margin-bottom: -25px;
 }
 
 .typeText {
@@ -31,26 +41,62 @@
 .card {
   box-shadow: -1px 2px 3px #1a2a467e;
   position: absolute;
-  top: 5%;
+  top: 10%;
   left: 10%;
   right: 10%;
-  bottom: 5%;
+  bottom: 10%;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  overflow: hidden;
+}
+
+.card img {
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  transition: width 0.6s ease, height 0.6s ease; /* Added transition */
 }
 
 .card button {
-  background: var(--dakrblue);
+  background: var(--darkblue);
   border: none;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .card button:hover {
-  opacity: 0.8;
+  opacity: 0.9;
+}
+
+.card .caption {
+  position: absolute;
+  top: 70px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  width: 100%;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  transition: transform 0.6s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+.caption h2,
+.caption p {
+  color: white;
+}
+
+.caption p {
+  font-family: "Poppins", sans-serif;
+}
+
+.jobseekerContent .card:hover img,
+.employerContent .card:hover img {
+  width: 100%;
+  height: 100%;
+}
+
+.jobseekerContent .card:hover .caption,
+.employerContent .card:hover .caption {
+  transform: translateX(5%);
+  border-radius: 10px;
 }
