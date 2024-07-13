@@ -34,8 +34,30 @@
   font-weight: 500;
 }
 
+/* Define keyframes for the border animation */
+@keyframes border-animation {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #1a2a46;
+  }
+}
+
 .registerCon input {
-  border: 2px solid #1a2a46;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.registerCon input:focus {
+  border-color: #1a2a46;
+  box-shadow: 0 0 10px rgba(26, 42, 70, 0.3);
+  animation: border-animation 0.6s forwards;
 }
 
 .regBtn {
