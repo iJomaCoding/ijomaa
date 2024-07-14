@@ -67,11 +67,12 @@
   padding: 10px 20px;
   border-radius: 7px;
   cursor: pointer;
-  font-weight: 600;
+  transition: background 0.3s, font-weight 0.3s;
 }
 
 .card button:hover {
-  background-color: #23395dde;
+  background: #23395dde;
+  font-weight: 600;
 }
 
 .card .caption {

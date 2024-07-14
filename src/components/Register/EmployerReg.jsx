@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./EmployerReg.module.css";
 import { Link } from "react-router-dom";
 import ijomaLogo from "../../assets/logo/ijoma2_dark.png";
 
-const JobseekerReg = () => {
+const EmployerReg = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleShowPasswordChange = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <div className={styles.container}>
       <Link to="/">
@@ -14,11 +20,29 @@ const JobseekerReg = () => {
         <h2>Employer Registration</h2>
         <form>
           <p>Username:</p>
-          <input type="" placeholder="Username" required />
+          <input type="text" placeholder="Username" required />
           <p>Password:</p>
-          <input type="password" placeholder="Password" required />
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="Password"
+            required
+          />
           <p>Re-enter Password:</p>
-          <input type="password" placeholder="Re-enter Password" required />
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="Re-enter Password"
+            required
+          />
+          <div className={styles.checkbox}>
+            <input
+              type="checkbox"
+              id="show-password"
+              name="show-password"
+              value="yes"
+              onChange={handleShowPasswordChange}
+            />
+            <p>Show Password</p>
+          </div>
           <button className={styles.regBtn} type="submit">
             Register
           </button>
@@ -39,4 +63,4 @@ const JobseekerReg = () => {
   );
 };
 
-export default JobseekerReg;
+export default EmployerReg;

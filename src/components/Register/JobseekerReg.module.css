@@ -38,6 +38,7 @@
   font-weight: 500;
   margin-top: 20px;
   margin-bottom: 0;
+  color: #1a2a46c5;
 }
 
 /* Define keyframes for the border animation */
@@ -68,14 +69,13 @@
 
 .regBtn {
   width: 110%;
-  margin-top: 3rem;
+  margin-top: 1rem;
   padding: 10px 20px;
   border: none;
   background: #1a2a46;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
-  width: 110%;
 }
 
 .regBtn:hover {
@@ -113,7 +113,57 @@ h3 {
   font-size: larger;
 }
 
-/* CSS */
+/* Custom checkbox styling */
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.checkbox p {
+  margin: 0;
+  font-size: 13px;
+  color: gray;
+}
+
+.checkbox input[type="checkbox"] {
+  padding: 7px;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #1a2a46;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  margin-top: 5px;
+}
+
+.checkbox input[type="checkbox"]:checked {
+  background-color: #1a2a46;
+}
+
+.checkbox input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox input[type="checkbox"]:focus {
+  border-color: #23395dde;
+}
+
+.checkbox label {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+/* CSS for the log-in button */
 .button89 {
   --b: 3px; /* border thickness */
   --s: 0.45em; /* size of the corner */
@@ -134,9 +184,7 @@ h3 {
   outline: var(--b) solid #0000;
   outline-offset: 0.6em;
   font-size: 14px;
-
   border: 0;
-
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
