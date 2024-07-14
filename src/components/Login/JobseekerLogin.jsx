@@ -6,7 +6,7 @@ const JobseekerLogin = () => {
   return (
     <div>
       <div className={styles.infield}>
-        <input type="email" placeholder="Email" required />
+        <input type="username" placeholder="Username" required />
         <label></label>
       </div>
       <div className={styles.infield}>

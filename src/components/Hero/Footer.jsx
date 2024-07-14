@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./Footer.module.css";
+import ijomalogo from "../../assets/logo/ijoma2_light.png";
 
 const Footer = () => {
   return (
     <footer className={styles.footerContainer}>
       <div className={styles.footerContent}>
         <div className={styles.logoSection}>
-          <h2>iJoma</h2>
+          <img src={ijomalogo} alt="iJoma" />
         </div>
         <div className={styles.linkSection}>
           <a href="/about">About Us</a>

@@ -27,13 +27,15 @@ const Login = () => {
       >
         <div className={styles.loginSection}>
           <div className={styles.jobseekerLogin}>
-            <h2>Jobseeker Login</h2>
+            <span>Jobseeker</span>
+            <h2>Log in. Unlock opportunities.</h2>
             <form>
               <JobseekerLogin />
             </form>
           </div>
           <div className={styles.employerLogin}>
-            <h2>Employer Login</h2>
+            <span>Employer</span>
+            <h2>Log in. Find top talent.</h2>
             <form>
               <EmployerLogin />
             </form>

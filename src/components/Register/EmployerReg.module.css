@@ -14,8 +14,56 @@
   top: 13px;
 }
 
-.container p {
+.registerCon {
+  margin-top: 5rem;
+  position: relative;
+  width: 20rem;
+  height: 27rem;
+  background: #ffffff;
+  box-shadow: -5px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 40px;
+  transform: translateX(-30%);
+}
+
+.registerCon h2 {
+  color: #1a2a46c7;
+}
+
+.registerCon form {
+  margin-right: 1.5rem;
+}
+
+.registerCon p {
   font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+/* Define keyframes for the border animation */
+@keyframes border-animation {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #1a2a46;
+  }
+}
+
+.registerCon input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.registerCon input:focus {
+  border-color: #1a2a46;
+  box-shadow: 0 0 10px rgba(26, 42, 70, 0.3);
+  animation: border-animation 0.6s forwards;
 }
 
 .regBtn {
@@ -34,9 +82,75 @@
   background: #23395dde;
 }
 
-.footer {
+.sideContainer {
+  background: #ffff;
+  box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 18rem;
+  height: 32rem;
+  position: absolute;
+  right: -70%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: none;
+}
+
+.sideContainer p,
+h3 {
+  margin: 0;
   font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
+}
+.sideContainer p {
+  font-weight: 400;
+  font-size: 14;
+}
+.sideContainer span {
+  color: #1a2a46;
+  font-size: larger;
+}
+
+/* CSS */
+.button89 {
+  --b: 3px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  --color: #1a2a46;
+  width: 150px;
+  margin-top: 1rem;
+  padding: calc(0.4em + var(--s)) calc(0.7em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
   font-size: 14px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button89:hover,
+.button89:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+  background-color: white;
+}
+
+.button89:active {
+  background: var(--color);
+  color: #fff;
 }

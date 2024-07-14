@@ -20,6 +20,12 @@
   font-weight: bold;
 }
 
+.logoSection img {
+  width: 280px;
+  height: 100px;
+  object-fit: cover;
+}
+
 .linkSection {
   flex: 1;
   display: flex;

@@ -26,12 +26,18 @@
   transform: translateX(-30%);
 }
 
+.registerCon h2 {
+  color: #1a2a46c7;
+}
+
 .registerCon form {
   margin-right: 1.5rem;
 }
 
 .registerCon p {
   font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 /* Define keyframes for the border animation */

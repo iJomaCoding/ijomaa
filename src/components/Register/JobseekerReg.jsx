@@ -13,8 +13,8 @@ const JobseekerReg = () => {
       <div className={styles.registerCon}>
         <h2>Jobseeker Registration</h2>
         <form>
-          <p>Email:</p>
-          <input type="email" placeholder="Email" required />
+          <p>Username:</p>
+          <input type="" placeholder="Username" required />
           <p>Password:</p>
           <input type="password" placeholder="Password" required />
           <p>Re-enter Password:</p>

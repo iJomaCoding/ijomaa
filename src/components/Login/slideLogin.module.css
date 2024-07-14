@@ -42,10 +42,20 @@
   transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 }
 
+.jobseekerLogin span,
+.employerLogin span {
+  position: absolute;
+  top: 10px;
+  color: rgba(128, 128, 128, 0.773);
+  font-size: 13px;
+}
+
 .jobseekerLogin h2,
 .employerLogin h2 {
   position: absolute;
   top: 90px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .jobseekerLogin form,
@@ -56,14 +66,18 @@
 
 /* Specific Positioning */
 .jobseekerLogin h2 {
-  left: 30px;
+  left: 80px;
 }
 .jobseekerLogin form {
   left: 30px;
 }
 
+.jobseekerLogin span {
+  left: 30px;
+}
+
 .employerLogin h2 {
-  right: 215px;
+  right: 160px;
 }
 .employerLogin form {
   right: 105px;
