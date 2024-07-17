@@ -7,12 +7,14 @@ const Header = () => {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.logoSection}>
-        <img src={ijomaLogo} alt="iJoma" />
+        <Link to="home">
+          <img src={ijomaLogo} alt="iJoma" />
+        </Link>
       </div>
       <div className={styles.middleSection}>
-        <p>Jobs</p>
-        <p>Applications</p>
-        <p>Profile</p>
+        <Link to="home">Jobs</Link>
+        <Link to="applications">Applications</Link>
+        <Link to="profile">Profile</Link>
       </div>
       <div className={styles.rightSection}>
         <Link to="/">Log out</Link>

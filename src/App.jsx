@@ -17,7 +17,7 @@ function App() {
         <Route path="/login" element={<SlideLogin />}></Route>
         <Route path="/jobseeker" element={<JobseekerReg />}></Route>
         <Route
-          path="/jobseeker/dashboard"
+          path="/jobseeker/dashboard/*"
           element={<JobseekerDashboard />}
         ></Route>
         <Route path="/employer" element={<EmployerReg />}></Route>
