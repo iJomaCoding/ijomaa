@@ -22,7 +22,7 @@ function App() {
         ></Route>
         <Route path="/employer" element={<EmployerReg />}></Route>
         <Route
-          path="/employer/dashboard"
+          path="/employer/dashboard/*"
           element={<EmployerDashboard />}
         ></Route>
         <Route path="/admin/login" element={<AdminLogin />}></Route>

@@ -19,7 +19,7 @@
   background: #23395dde;
 }
 
-input {
+.infield input {
   width: 100%;
   padding: 12px 15px;
   border-radius: 5px;
@@ -28,7 +28,7 @@ input {
   outline: none;
 }
 
-label {
+.infield label {
   position: absolute;
   left: 50%;
   top: 100%;
@@ -39,7 +39,7 @@ label {
   transition: 0.3s;
 }
 
-input:focus ~ label {
+.infield input:focus ~ label {
   width: 110%;
 }
 
