@@ -4,7 +4,7 @@ import styles from "./Landingpage.module.css";
 import Header from "./Header";
 import Footer from "./Footer"; // Import the Footer
 import hero1 from "../../assets/hero/1.png";
-import hero2 from "../../assets/hero/2.png";
+import hero2 from "../../assets/hero/3.png";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
