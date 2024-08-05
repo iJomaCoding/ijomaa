@@ -52,6 +52,10 @@
   cursor: pointer;
 }
 
+.fileInputContainer:hover {
+  opacity: 0.8;
+}
+
 .modal {
   position: fixed;
   top: 0;

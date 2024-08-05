@@ -3,32 +3,47 @@
   flex-direction: column;
   gap: 15px;
   width: 100%;
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  margin-bottom: 30px;
+  padding: 60px 40px 60px 50px;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #f9f9f9;
+}
+
+.profileContent h2 {
+  margin: 0;
+  color: #1a2a46;
+}
+
+.fullname {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .profileField {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  flex: 1;
 }
 
 .profileField label {
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 5px;
+  color: rgb(78, 78, 78);
 }
 
 .profileField input,
 .profileField select,
 .profileField textarea {
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 90%;
+  width: 95%;
 }
 
 .profileField textarea {
@@ -36,16 +51,29 @@
   min-height: 50px;
 }
 
-.saveBtn {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+.profileField .certification {
+  width: 200px;
   cursor: pointer;
-  align-self: flex-end;
 }
 
-.saveBtn:hover {
-  background-color: #0056b3;
+.fullname input {
+  width: 280px;
+}
+
+.smallField {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.smallField input,
+.smallField select {
+  width: 200px;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 10px 0;
 }

@@ -1,0 +1,57 @@
+.profileContainer {
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.saveBtn {
+  width: 30%;
+  position: relative;
+  height: 3.5em;
+  border: 4px ridge #1a2a46;
+  outline: none;
+  background-color: transparent;
+  color: #1a2a46;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 12px;
+}
+
+.saveBtn::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #ffffff;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.saveBtn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #ffffff;
+  transition: 0.5s;
+}
+
+.saveBtn:hover::before,
+.saveBtn:hover::after {
+  transform: scale(0);
+}
+
+.saveBtn:hover {
+  box-shadow: inset 0px 0px 25px #1a2a46;
+}

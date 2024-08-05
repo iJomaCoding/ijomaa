@@ -108,7 +108,7 @@ const ProfileImage = () => {
           id="fileInput"
         />
         <label htmlFor="fileInput" className={styles.fileInputLabel}>
-          Choose Image
+          Upload Profile
         </label>
       </div>
 
