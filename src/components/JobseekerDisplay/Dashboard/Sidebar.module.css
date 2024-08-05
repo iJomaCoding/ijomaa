@@ -1,0 +1,40 @@
+.sidebar {
+  position: fixed;
+  right: -350px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #1a2a46;
+  color: white;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.sidebarContent {
+  margin-top: 40px;
+}
+
+.hiddenOverflow {
+  overflow: hidden;
+}
+
+.backIcon {
+  width: 40px;
+  filter: invert();
+}

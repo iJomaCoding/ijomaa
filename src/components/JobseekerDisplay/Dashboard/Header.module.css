@@ -1,3 +1,5 @@
+/* Header.module.css */
+
 .headerContainer {
   --darkblue: #1a2a46;
   display: flex;
@@ -87,4 +89,11 @@
 .rightSection a:hover,
 .rightSection a:hover + svg {
   opacity: 0.9;
+}
+
+.burgerMenu {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 10px;
 }
