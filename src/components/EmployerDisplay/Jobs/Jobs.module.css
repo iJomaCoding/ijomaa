@@ -1,0 +1,15 @@
+.navContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 20px;
+}
+
+.navContainer a {
+  text-decoration: none;
+}
+
+.navContainer a:hover {
+  font-weight: bold;
+}
