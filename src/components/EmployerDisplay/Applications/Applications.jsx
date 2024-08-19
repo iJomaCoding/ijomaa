@@ -1,7 +1,13 @@
 import React from "react";
+import Header from "../Dashboard/Header";
 
 const Applications = () => {
-  return <div>Employer Applicaiton</div>;
+  return (
+    <div>
+      <Header />
+      <p>Applications</p>
+    </div>
+  );
 };
 
 export default Applications;
