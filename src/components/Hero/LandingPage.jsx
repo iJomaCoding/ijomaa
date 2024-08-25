@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
-    <div className={styles.mainContainer}>
+    <main className={styles.mainContainer}>
       <div className={styles.headerContainer}></div>
       <Header />
       <div className={styles.featuredName}>
@@ -54,7 +54,7 @@ const LandingPage = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </main>
   );
 };
 
