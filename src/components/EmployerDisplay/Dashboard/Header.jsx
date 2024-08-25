@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.logoSection}>
-        <Link to="jobs">
+        <Link to="/employer/dashboard">
           <img src={ijomaLogo} alt="iJoma" />
         </Link>
       </div>
