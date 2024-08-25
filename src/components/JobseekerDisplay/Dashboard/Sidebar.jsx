@@ -15,7 +15,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   }, [isOpen]);
 
   const handleLogout = (e) => {
-    e.preventDefault(); // Prevent default navigation
+    e.preventDefault();
     document.body.classList.remove(styles.hiddenOverflow); // Re-enable scroll
     toggleSidebar(); // Close the sidebar
     navigate("/"); // Navigate to the log out route
