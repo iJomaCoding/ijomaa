@@ -56,6 +56,35 @@
   cursor: pointer;
 }
 
+/* Smaller Slider styling */
+.profileField .slider {
+  width: 95%;
+  margin-top: 10px;
+  appearance: none;
+  height: 5px;
+  background: #ccc;
+  border-radius: 3px;
+  outline: none;
+  transition: background 0.15s ease-in-out;
+}
+
+.profileField .slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px; /* Reduced size for the thumb */
+  height: 10px; /* Reduced size for the thumb */
+  background: #1a2a46;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profileField .slider::-moz-range-thumb {
+  width: 10px; /* Reduced size for the thumb */
+  height: 10px; /* Reduced size for the thumb */
+  background: #1a2a46;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .fullname input {
   width: 280px;
 }
@@ -76,4 +105,18 @@
   height: 1px;
   background: #ccc;
   margin: 10px 0;
+}
+
+.addButton {
+  padding: 10px 20px;
+  border: none;
+  background-color: #1a2a46;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.addButton:hover {
+  background-color: #0e1c36;
 }
