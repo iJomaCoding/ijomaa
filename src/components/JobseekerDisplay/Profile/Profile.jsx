@@ -12,9 +12,13 @@ const Profile = () => {
       <div className={styles.profileContainer}>
         <ProfileImage />
         <ProfileContent />
+        <button type="submit" className={styles.btnSave}>
+          Save
+        </button>
+      </div>
+      <div className={styles.profileContainer}>
         <MatchingInfo />
-
-        <button type="submit" className={styles.saveBtn}>
+        <button type="submit" className={styles.btnSave}>
           Save
         </button>
       </div>

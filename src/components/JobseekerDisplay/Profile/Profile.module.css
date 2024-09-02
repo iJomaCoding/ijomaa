@@ -55,3 +55,17 @@
 .saveBtn:hover {
   box-shadow: inset 0px 0px 25px #1a2a46;
 }
+
+.btnSave {
+  margin: 20px;
+  padding: 10px 50px;
+  background-color: #1a2a46;
+  color: whitesmoke;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.btnSave:hover {
+  opacity: 0.9;
+}
