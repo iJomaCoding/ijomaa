@@ -7,7 +7,9 @@ const Navs = () => {
   return (
     <nav className={styles.navContainer}>
       <button onClick={() => navigate("/employer/dashboard")}>Jobs</button>
-      <button onClick={() => navigate("matched")}>Matched Candidates</button>
+      <button onClick={() => navigate("/employer/dashboard/matched")}>
+        Matched Candidates
+      </button>
     </nav>
   );
 };

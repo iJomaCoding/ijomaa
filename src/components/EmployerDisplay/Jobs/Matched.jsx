@@ -1,12 +1,16 @@
 import React from "react";
 import Navs from "./Navs";
+import { Link } from "react-router-dom";
 
 const Matched = () => {
   return (
-    <div>
+    <>
       <Navs />
-      <h2>matched candidates</h2>
-    </div>
+      <div>
+        <Link to="/employer/dashboard/postjob">Create a jobpost</Link>
+        <h2>matched candidates</h2>
+      </div>
+    </>
   );
 };
 
