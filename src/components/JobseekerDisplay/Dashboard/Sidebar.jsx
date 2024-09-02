@@ -32,13 +32,13 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <img src={backIcon} alt="Close" className={styles.backIcon} />
         </button>
         <div className={styles.sidebarContent}>
-          <Link to="home">
+          <Link to="/jobseeker/dashboard">
             <div className={styles.tileBar}>Jobs</div>
           </Link>
-          <Link to="profile">
+          <Link to="/jobseeker/profile">
             <div className={styles.tileBar}>Profile</div>
           </Link>
-          <Link to="applications">
+          <Link to="/jobseeker/applications">
             <div className={styles.tileBar}>Applications</div>
           </Link>
           <Link to="/" onClick={handleLogout}>

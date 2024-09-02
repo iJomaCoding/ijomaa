@@ -16,14 +16,14 @@ const Header = () => {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.logoSection}>
-        <Link to="home">
+        <Link to="/jobseeker/dashboard">
           <img src={ijomaLogo} alt="iJoma" />
         </Link>
       </div>
       <div className={styles.middleSection}>
-        <Link to="home">Jobs</Link>
-        <Link to="applications">Applications</Link>
-        <Link to="profile">Profile</Link>
+        <Link to="/jobseeker/dashboard">Jobs</Link>
+        <Link to="/jobseeker/application">Applications</Link>
+        <Link to="/jobseeker/profile">Profile</Link>
       </div>
       <div className={styles.rightSection}>
         <img

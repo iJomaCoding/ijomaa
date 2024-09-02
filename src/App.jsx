@@ -1,10 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import SlideLogin from "./components/Login/Login";
 import JobseekerReg from "./components/Register/JobseekerReg";
 import EmployerReg from "./components/Register/EmployerReg";
 import AdminLogin from "./components/Admin/Login/AdminLogin";
 import JobseekerDashboard from "./components/JobseekerDisplay/Dashboard/JobseekerDashboard";
+import JobseekerProfile from "./components/JobseekerDisplay/Profile/Profile";
+import JobseekerApplications from "./components/JobseekerDisplay/Applications/Applications";
 import EmployerDashboard from "./components/EmployerDisplay/Dashboard/EmployerDashboard";
 import AdminDashboard from "./components/Admin/Dashboard/AdminDashboard";
 import LandingPage from "./components/Hero/LandingPage";
@@ -23,6 +25,11 @@ function App() {
           path="/jobseeker/dashboard/*"
           element={<JobseekerDashboard />}
         ></Route>
+        <Route
+          path="/jobseeker/application"
+          element={<JobseekerApplications />}
+        ></Route>
+        <Route path="/jobseeker/profile" element={<JobseekerProfile />}></Route>
         {/* employer */}
         <Route path="/employer" element={<EmployerReg />}></Route>
         <Route
