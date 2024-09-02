@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import styles from "./PostJob.module.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const PostJob = () => {
-  const navigate = useNavigate();
-
   const [jobDetails, setJobDetails] = useState({
     jobtitle: "",
     jobdescription: "",
@@ -14,6 +12,7 @@ const PostJob = () => {
     softSkills: { name: "", level: 0 },
     experience: "",
     certificationLevel: 0,
+    otherSkills: [],
   });
 
   const skills = ["JavaScript", "React", "CSS", "HTML", "Node.js", "Python"];
@@ -35,6 +34,23 @@ const PostJob = () => {
         ...prevDetails[skillType],
         [field]: value,
       },
+    }));
+  };
+
+  const handleOtherSkillChange = (index, field, value) => {
+    const updatedSkills = [...jobDetails.otherSkills];
+    updatedSkills[index][field] =
+      field === "level" ? parseInt(value, 10) : value;
+    setJobDetails((prevDetails) => ({
+      ...prevDetails,
+      otherSkills: updatedSkills,
+    }));
+  };
+
+  const addOtherSkill = () => {
+    setJobDetails((prevDetails) => ({
+      ...prevDetails,
+      otherSkills: [...prevDetails.otherSkills, { name: "", level: 0 }],
     }));
   };
 
@@ -76,10 +92,40 @@ const PostJob = () => {
     </div>
   );
 
+  const renderOtherSkills = () =>
+    jobDetails.otherSkills.map((skill, index) => (
+      <div key={index} className={styles.skillField}>
+        <label>Other Skill {index + 1}:</label>
+        <input
+          type="text"
+          value={skill.name}
+          onChange={(e) =>
+            handleOtherSkillChange(index, "name", e.target.value)
+          }
+          placeholder="Enter skill name"
+          required
+        />
+
+        <label>Level:</label>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          step="10"
+          value={skill.level}
+          onChange={(e) =>
+            handleOtherSkillChange(index, "level", e.target.value)
+          }
+          className={styles.slider}
+        />
+        <div className={styles.levelLabel}>{skill.level}%</div>
+      </div>
+    ));
+
   return (
     <div className={styles.container}>
+      <Link to="/employer/dashboard">Home</Link>
       <div className={styles.formContainer}>
-        <button onClick={() => navigate("/employer/dashboard")}>back</button>
         <h2>Post a Job</h2>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.field}>
@@ -105,7 +151,11 @@ const PostJob = () => {
 
           <div className={styles.field}>
             <label>Jobseeker's Educational Attainment:</label>
-            <select>
+            <select
+              name="education"
+              onChange={handleInputChange}
+              value={jobDetails.education}
+            >
               <option value="">None</option>
               <option value="highschool">High School</option>
               <option value="associate">Associate Degree</option>
@@ -163,6 +213,16 @@ const PostJob = () => {
               {jobDetails.certificationLevel}%
             </div>
           </div>
+
+          {renderOtherSkills()}
+
+          <button
+            type="button"
+            className={styles.addButton}
+            onClick={addOtherSkill}
+          >
+            Add Other Skill
+          </button>
 
           <button type="submit" className={styles.submitButton}>
             Post Job

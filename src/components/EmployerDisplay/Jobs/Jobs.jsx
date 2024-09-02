@@ -1,15 +1,16 @@
 import React from "react";
 import styles from "./Jobs.module.css";
-import { Link, Outlet, Route, Routes, useNavigate } from "react-router-dom";
+import Navs from "./Navs";
+import { Link } from "react-router-dom";
 
 const Jobs = () => {
-  const navigate = useNavigate();
   return (
     <div>
-      <button onClick={() => navigate("postjob")}>Create a Job Post</button>
-      <button onClick={() => navigate("matched")}>Matched Candidates</button>
-
-      <h2>Job postings or Jobseekers Profile Dsiplay</h2>
+      <Navs />
+      <div>
+        <Link to="postjob">Create a jobpost</Link>
+        <h2>Job postings or Jobseekers Profile Dsiplay</h2>
+      </div>
     </div>
   );
 };

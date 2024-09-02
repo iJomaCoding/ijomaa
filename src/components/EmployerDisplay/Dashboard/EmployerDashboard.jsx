@@ -1,11 +1,8 @@
 import React from "react";
 import styles from "./EmployerDashboard.module.css";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "./Header";
 import Jobs from "../Jobs/Jobs";
-import Profile from "../Profile/Profile";
-import Applications from "../Applications/Applications";
-import JobsContent from "../Jobs/JobsContent";
 import PostJob from "../Jobs/PostJob";
 import Matched from "../Jobs/Matched";
 

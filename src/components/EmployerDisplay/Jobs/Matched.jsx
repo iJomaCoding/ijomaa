@@ -1,11 +1,10 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import Navs from "./Navs";
 
 const Matched = () => {
-  const navigate = useNavigate();
   return (
     <div>
-      <button onClick={() => navigate("/employer/dashboard")}>back</button>
+      <Navs />
       <h2>matched candidates</h2>
     </div>
   );

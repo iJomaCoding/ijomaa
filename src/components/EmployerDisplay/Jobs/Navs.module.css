@@ -1,0 +1,19 @@
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 20px;
+}
+
+.navContainer button {
+  padding: 5px 10px;
+  background-color: #1a2a46;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.navContainer button:hover {
+  opacity: 0.8;
+}
