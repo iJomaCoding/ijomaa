@@ -1,98 +1,132 @@
-.formContainer {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.form {
+.jobContent {
   display: flex;
   flex-direction: column;
-}
-
-.field {
-  margin-bottom: 15px;
-}
-
-.field label {
-  display: block;
-  margin-bottom: 5px;
-  color: #1a2a46;
-  font-weight: bold;
-}
-
-.field input,
-.field textarea,
-.field select {
+  gap: 15px;
   width: 100%;
-  padding: 8px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 60px 40px 60px 50px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #f2f2f2;
+  border-radius: 10px;
+  background-color: #f9f9f9;
 }
 
-.skillField {
-  margin-bottom: 20px;
-}
-
-.skillField label {
-  display: block;
-  margin-bottom: 5px;
-  color: #1a2a46;
-  font-weight: bold;
-}
-
-.skillField select,
-.skillField input[type="text"] {
+.jobFormContainer {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #7a5192;
-  border-radius: 4px;
-  background-color: #f7f5fc;
 }
 
-.slider {
+.jobForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.jobField {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.jobField label {
+  font-weight: 600;
+  color: rgb(78, 78, 78);
+}
+
+.jobField input,
+.jobField textarea,
+.jobField select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.jobField textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Slider styling */
+.jobSlider {
   width: 100%;
   margin-top: 10px;
+  appearance: none;
+  height: 5px;
+  background: #ccc;
+  border-radius: 3px;
+  outline: none;
+  transition: background 0.15s ease-in-out;
 }
 
-.levelLabel {
+.jobSlider::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #1a2a46;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.jobSlider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #1a2a46;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Add Button styling */
+.jobAddButton {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 20px 0 10px; /* Add margin above the buttons */
+  border: none;
+  background-color: #1a2a46;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.jobAddButton:hover {
+  background-color: #0e1c36;
+}
+
+/* Divider styling */
+.jobDivider {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 10px 0;
+}
+
+/* Weight Label (matching Certification Level style) */
+.jobWeightLabel {
   margin-top: 5px;
   font-size: 14px;
   text-align: right;
   color: #b08a6a;
 }
 
-.addButton {
+/* Submit Button styling */
+.jobSubmitButton {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
   background-color: #4caf50;
   color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-bottom: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.addButton:hover {
-  opacity: 0.8;
-}
-
-.submitButton {
-  background-color: #1a2a46;
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
-.submitButton:hover {
-  opacity: 0.8;
+.jobSubmitButton:hover {
+  background-color: #45a049;
 }
