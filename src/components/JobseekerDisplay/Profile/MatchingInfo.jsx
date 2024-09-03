@@ -1,22 +1,55 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import styles from "./ProfileContent.module.css";
 
 const MatchingInfo = () => {
-  const [skills, setSkills] = useState([
-    { type: "Technical Skills", value: "", scale: 50 },
-    { type: "Core Skills", value: "", scale: 50 },
-    { type: "Soft Skills", value: "", scale: 50 },
-    { type: "Experience", value: "", scale: 50 },
-  ]);
+  const [skills, setSkills] = useState([]);
 
-  const addSkill = () => {
-    setSkills([...skills, { type: "Other Skill", value: "", scale: 50 }]);
+  const addSkill = (type, description = "") => {
+    setSkills([
+      ...skills,
+      { id: uuidv4(), type, description, value: "", scale: 0 },
+    ]);
   };
 
-  const handleSkillChange = (index, field, value) => {
-    const newSkills = [...skills];
-    newSkills[index][field] = value;
+  const handleSkillChange = (id, field, value) => {
+    const newSkills = skills.map((skill) =>
+      skill.id === id ? { ...skill, [field]: value } : skill
+    );
     setSkills(newSkills);
+  };
+
+  const renderSkillsByType = (type) => {
+    return skills
+      .filter((skill) => skill.type === type)
+      .map((skill) => (
+        <div key={skill.id} className={styles.profileField}>
+          <label>{skill.type}:</label>
+          {skill.description && <p>{skill.description}</p>}
+          <textarea
+            placeholder={`Enter your ${skill.type.toLowerCase()}`}
+            value={skill.value}
+            onChange={(e) =>
+              handleSkillChange(skill.id, "value", e.target.value)
+            }
+          ></textarea>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            step="10"
+            value={skill.scale}
+            onChange={(e) =>
+              handleSkillChange(skill.id, "scale", parseInt(e.target.value, 10))
+            }
+            className={styles.slider}
+            style={{
+              background: `linear-gradient(to right, #1a2a46 ${skill.scale}%, #ccc ${skill.scale}%)`,
+            }}
+          />
+          <span>Weight: {skill.scale}%</span>
+        </div>
+      ));
   };
 
   return (
@@ -40,35 +73,34 @@ const MatchingInfo = () => {
         <input type="text" placeholder="Enter your job title" />
       </div>
 
-      {skills.map((skill, index) => (
-        <div key={index} className={styles.profileField}>
-          <label>{skill.type}:</label>
-          <textarea
-            placeholder={`Enter your ${skill.type.toLowerCase()}`}
-            value={skill.value}
-            onChange={(e) => handleSkillChange(index, "value", e.target.value)}
-          ></textarea>
-          <input
-            type="range"
-            min="0"
-            max="100"
-            step="10"
-            value={skill.scale}
-            onChange={(e) => handleSkillChange(index, "scale", e.target.value)}
-            className={styles.slider}
-            style={{
-              background: `linear-gradient(to right, #1a2a46 ${skill.scale}%, #ccc ${skill.scale}%)`,
-            }}
-          />
-          <span>Proficiency: {skill.scale}%</span>
-        </div>
-      ))}
+      {["Technical Skills", "Core Skills", "Soft Skills", "Experience"].map(
+        (type) => (
+          <div key={type}>
+            {renderSkillsByType(type)}
+            <button
+              type="button"
+              className={styles.addButton}
+              onClick={() => addSkill(type)}
+            >
+              Add {type}
+            </button>
+            <hr className={styles.divider} /> {/* Divider below each button */}
+          </div>
+        )
+      )}
 
-      <button type="button" className={styles.addButton} onClick={addSkill}>
-        Add Other Skill
-      </button>
+      {/* Custom Skill Section */}
+      <div>
+        {renderSkillsByType("Other Skill")}
 
-      <hr className={styles.divider} />
+        <button
+          type="button"
+          className={styles.addButton}
+          onClick={() => addSkill("Other Skill", "")}
+        >
+          Add Other Skill Type
+        </button>
+      </div>
 
       <div className={styles.profileField}>
         <label>Certification:</label>

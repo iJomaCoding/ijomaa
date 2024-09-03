@@ -12,53 +12,41 @@
   background-color: #f9f9f9;
 }
 
-.profileContent h2 {
-  margin: 0;
-  color: #1a2a46;
-}
-
-.fullname {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
 .profileField {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   flex: 1;
 }
 
 .profileField label {
   font-weight: 600;
-  margin-bottom: 5px;
   color: rgb(78, 78, 78);
 }
 
 .profileField input,
 .profileField select,
 .profileField textarea {
-  padding: 15px;
+  padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 95%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .profileField textarea {
   resize: vertical;
-  min-height: 50px;
+  min-height: 80px;
 }
 
 .profileField .certification {
-  width: 200px;
+  width: 100%;
   cursor: pointer;
 }
 
-/* Smaller Slider styling */
+/* Slider styling */
 .profileField .slider {
-  width: 95%;
+  width: 100%;
   margin-top: 10px;
   appearance: none;
   height: 5px;
@@ -70,34 +58,31 @@
 
 .profileField .slider::-webkit-slider-thumb {
   appearance: none;
-  width: 10px; /* Reduced size for the thumb */
-  height: 10px; /* Reduced size for the thumb */
+  width: 15px;
+  height: 15px;
   background: #1a2a46;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .profileField .slider::-moz-range-thumb {
-  width: 10px; /* Reduced size for the thumb */
-  height: 10px; /* Reduced size for the thumb */
+  width: 15px;
+  height: 15px;
   background: #1a2a46;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.fullname input {
-  width: 280px;
-}
-
-.smallField {
+.skillHeader {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.smallField input,
-.smallField select {
-  width: 200px;
+.skillHeader h3 {
+  margin: 0;
+  color: #1a2a46;
 }
 
 .divider {
@@ -107,16 +92,27 @@
   margin: 10px 0;
 }
 
+/* Add Button styling */
 .addButton {
+  margin-top: 10px; /* Ensures it’s below the slider */
   padding: 10px 20px;
   border: none;
   background-color: #1a2a46;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
-  align-self: flex-start;
 }
 
 .addButton:hover {
   background-color: #0e1c36;
+}
+
+/* Custom Skill Section styling */
+.customSkillSection {
+  margin-top: 20px;
+}
+
+.customSkillSection input[type="text"],
+.customSkillSection textarea {
+  margin-top: 5px;
 }
